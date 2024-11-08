@@ -1,32 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion> <!-- The POM model version used for this project. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>    <!-- The POM model version used for this project. -->
 
     <parent>
-        <groupId>org.springframework.boot</groupId> <!-- The group ID for the Spring Boot starter parent. -->
-        <artifactId>spring-boot-starter-parent</artifactId> <!-- Parent project for Spring Boot applications. -->
-        <version>3.3.5</version> <!-- Specifies the version of Spring Boot. -->
-        <relativePath/> <!-- Specifies to look for the parent in the repository. -->
+        <groupId>org.springframework.boot</groupId>        <!-- The group ID for the Spring Boot starter parent. -->
+        <artifactId>spring-boot-starter-parent</artifactId>        <!-- Parent project for Spring Boot applications. -->
+        <version>3.3.5</version>        <!-- Specifies the version of Spring Boot. -->
+        <relativePath/>
+        <!-- Specifies to look for the parent in the repository. -->
     </parent>
 
-    <groupId>com.example</groupId> <!-- The group ID for this project. -->
-    <artifactId>demo</artifactId> <!-- The artifact ID, unique within the group. -->
-    <version>0.0.1-SNAPSHOT</version> <!-- The project version. -->
-    <name>demo</name> <!-- Name of the project. -->
-    <description>Demo project for Spring Boot</description> <!-- Short description of the project. -->
-    <url/> <!-- Placeholder for the project URL (optional). -->
+    <groupId>com.example</groupId>    <!-- The group ID for this project. -->
+    <artifactId>demo</artifactId>    <!-- The artifact ID, unique within the group. -->
+    <version>0.0.1-SNAPSHOT</version>    <!-- The project version. -->
+    <name>demo</name>    <!-- Name of the project. -->
+    <description>Demo project for Spring Boot</description>    <!-- Short description of the project. -->
+    <url/>
+    <!-- Placeholder for the project URL (optional). -->
 
     <properties>
-        <java.version>17</java.version> <!-- Java version used for the project. -->
+        <java.version>17</java.version>        <!-- Java version used for the project. -->
     </properties>
 
     <dependencies>
-        <!-- Spring Boot starter for Spring Data JPA (Java Persistence API). -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>3.3.5</version>            <!-- Ensure this matches your Spring Boot version -->
+            <scope>runtime</scope>
+            <optional>true</optional>
         </dependency>
+
 
         <!-- Spring Boot starter for building web applications with REST APIs. -->
         <dependency>
@@ -34,18 +40,13 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- H2 Database dependency for in-memory database functionality during runtime. -->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope> <!-- Indicates that this dependency is only needed at runtime. -->
-        </dependency>
+
 
         <!-- Spring Boot starter for unit and integration testing. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope> <!-- Indicates that this dependency is only used for testing. -->
+            <scope>test</scope>            <!-- Indicates that this dependency is only used for testing. -->
         </dependency>
     </dependencies>
 
@@ -55,7 +56,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.3.5</version> <!-- Specifies the version of the plugin. -->
+                <version>3.3.5</version>                <!-- Specifies the version of the plugin. -->
             </plugin>
         </plugins>
     </build>
