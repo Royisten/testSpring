@@ -1,4 +1,4 @@
-package com.example.demo; // Package declaration.
+package roy.trailOne.app; // Package declaration.
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ public class DemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
-        log.info("God is helping");
+        log.info("i changed something and God is still helping me always");
 
     }
 }

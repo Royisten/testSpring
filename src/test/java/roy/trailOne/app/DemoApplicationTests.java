@@ -1,4 +1,4 @@
-package com.example.demo; // Package declaration for the test class.
+package roy.trailOne.app; // Package declaration for the test class.
 
 import org.junit.jupiter.api.Test; // Import for defining test methods.
 import org.springframework.boot.test.context.SpringBootTest; // Import to indicate a Spring Boot test.

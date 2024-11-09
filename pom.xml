@@ -48,6 +48,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>            <!-- Indicates that this dependency is only used for testing. -->
         </dependency>
+
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>3.0.2</version>            <!-- or latest version -->
+        </dependency>
+
     </dependencies>
 
     <build>

@@ -1,4 +1,4 @@
-package com.example.demo;
+package roy.trailOne.app;
 
 
 import org.springframework.stereotype.Component;

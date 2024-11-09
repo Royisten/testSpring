@@ -1,4 +1,4 @@
-package com.example.demo; // Package declaration - organizes the class into a namespace structure.
+package roy.trailOne.app; // Package declaration - organizes the class into a namespace structure.
 
 import org.springframework.web.bind.annotation.GetMapping; // Import for mapping HTTP GET requests.
 import org.springframework.web.bind.annotation.RestController; // Import to define this class as a RESTful controller.
