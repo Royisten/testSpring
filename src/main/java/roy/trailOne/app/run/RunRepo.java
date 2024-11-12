@@ -15,6 +15,9 @@ public class RunRepo {
     List<Run> findAll() {
         return runs;
     }
+    Run findByID(Integer id){
+        return runs.stream().filter(runs->runs.id()==id).findFirst().get();
+    }
 
     @PostConstruct
     private void init() {
