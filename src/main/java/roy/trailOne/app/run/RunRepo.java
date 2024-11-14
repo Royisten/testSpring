@@ -21,6 +21,9 @@ public class RunRepo {
             filter(run->run.id()==id).
             findFirst();
     }
+    void create(Run run){
+        runs.add(run);
+    }
 
     @PostConstruct
     private void init() {
