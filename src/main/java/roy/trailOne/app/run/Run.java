@@ -1,22 +1,23 @@
 package roy.trailOne.app.run;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 
-//import jakarta.validation.constraints.NotEmpty;
-//import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Positive;
 
 public record Run(
         Integer id,
-        //@NotEmpty
+        @NotEmpty
         String title,
         LocalDateTime startedOn,
         LocalDateTime completedOn,
-        //@Positive
+        @Positive
         Integer miles,
         Location location
 ) {
 
-   /*  public Run {
+     public Run {
         if (!completedOn.isAfter(startedOn)) {
             throw new IllegalArgumentException("Completed On must be after Started On");
         }
@@ -28,6 +29,6 @@ public record Run(
 
     public Integer getAvgPace() {
         return Math.toIntExact(getDuration().toMinutes() / miles);
-    }*/
+    }
 
 }
