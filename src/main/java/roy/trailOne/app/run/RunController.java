@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/runs")
 public class RunController {
@@ -36,19 +38,24 @@ public class RunController {
      }
      return run.get();
    }
-   //post request method  
-   @PostMapping("")
+
    //notify if a new post request is accepted (201 CREATED)
    @ResponseStatus(HttpStatus.CREATED)
-   void create( @RequestBody Run run){
+   //post request method  
+   @PostMapping("")
+   void create(@Valid @RequestBody Run run){
       runRepository.create(run);
    }
+
+
    //put request method
    @ResponseStatus(HttpStatus.NO_CONTENT)
    @PutMapping("/{id}")
-   void update(@RequestBody Run run, @PathVariable Integer id){
+   void update(@Valid@RequestBody Run run, @PathVariable Integer id){
       runRepository.update(run, id);
    }
+
+
 
    //delete request method
    @ResponseStatus(HttpStatus.GONE)
