@@ -50,9 +50,27 @@
         </dependency>
 
         <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- H2 database sql Provides a fast in-memory database 
+         that supports JDBC API and R2DBC access, 
+         with a small (2mb) footprint. 
+         Supports embedded and server modes as well 
+         as a browser based console application. -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <!-- JDBC API sql.Database Connectivity API that defines
+          how a client may connect and query a database. -->
 
     </dependencies>
 
