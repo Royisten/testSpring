@@ -1,5 +1,11 @@
 package roy.trailOne.app.run;
 
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.jdbc.core.simple.JdbcClient;
+
 //import java.time.LocalDateTime;
 //import java.time.temporal.ChronoUnit;
 //import java.util.ArrayList;
@@ -11,6 +17,18 @@ import org.springframework.stereotype.Repository;
 //import jakarta.annotation.PostConstruct;
 @Repository
 public class RunRepo {
+    private static final Logger log = LoggerFactory.getLogger(RunRepo.class);
+    private final JdbcClient jdbcClient;
+
+    public RunRepo(JdbcClient jdbcClient){
+        this.jdbcClient=jdbcClient;
+    }
+    public List<Run> findAll(){
+        return jdbcClient.sql("select * from run")
+        .query(Run.class)
+        .list();
+    }
+
     /*private List<Run> runs = new ArrayList<>();
 
     List<Run> findAll() {

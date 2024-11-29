@@ -1,11 +1,11 @@
 package roy.trailOne.app.run;
 
-//import java.util.List;
+import java.util.List;
 //import java.util.Optional;
 
 //import org.springframework.http.HttpStatus;
 //import org.springframework.web.bind.annotation.DeleteMapping;
-//import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 //import org.springframework.web.bind.annotation.PathVariable;
 //import org.springframework.web.bind.annotation.PostMapping;
 //import org.springframework.web.bind.annotation.PutMapping;
@@ -26,11 +26,12 @@ public class RunController {
    public RunController(RunRepo runRepository){
     this.runRepository= runRepository;
    }
-   /*  @GetMapping("")
+    @GetMapping("")
    List<Run> findAll(){
     return runRepository.findAll();
    }
-   @GetMapping("/{id}")
+
+   /*@GetMapping("/{id}")
    Run findByID(@PathVariable Integer id){
      Optional<Run>run = runRepository.findByID(id);
      if (run.isEmpty()) {
